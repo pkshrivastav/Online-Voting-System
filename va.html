@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2000px;
+        }
+        input, button, select {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="va.css">
+
+</head>
+<body>
+    <h2>Online Voting System</h2>
+
+    <h3>Register</h3>
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="aadhaar_id" placeholder="Aadhaar ID">
+    <input type="text" id="voter_id" placeholder="Voter ID">
+    <input type="password" id="password" placeholder="Password">
+    <input type="text" id="state" placeholder="State">
+    
+    <select id="sex">
+        <option value="">Select Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+    
+    <input type="number" id="age" placeholder="Age">
+    
+    <button onclick="register()">Register</button>
+
+    <h3>Login</h3>
+    <input type="text" id="login_aadhaar" placeholder="Aadhaar ID">
+    <input type="text" id="login_voter" placeholder="Voter ID">
+    <input type="password" id="login_password" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <h3>Vote</h3>
+    <select id="candidate">
+        <option value="">Select Party</option>
+        <option value="BJP">BJP</option>
+        <option value="Congress">Congress</option>
+        <option value="AAP">AAP</option>
+        <option value="Another">Another</option>
+        <option value="Nota">Nota</option>
+    </select>
+    <button onclick="vote()">Vote</button>
+
+    <script>
+        let token = "";
+
+        function register() {
+            let age = document.getElementById("age").value;
+            if (age < 18) {
+                alert("You must be at least 18 years old to register.");
+                return;
+            }
+
+            fetch("http://127.0.0.1:5000/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: document.getElementById("name").value,
+                    aadhaar_id: document.getElementById("aadhaar_id").value,
+                    voter_id: document.getElementById("voter_id").value,
+                    password: document.getElementById("password").value,
+                    state: document.getElementById("state").value,
+                    sex: document.getElementById("sex").value,
+                    candidate: document.getElementById("candidate").value,
+                    age: age
+                })
+            }).then(response => response.json())
+              .then(data => alert(data.message));
+        }
+
+        function login() {
+            let aadhaar = document.getElementById("login_aadhaar").value;
+            let voter_id = document.getElementById("login_voter").value;
+            let password = document.getElementById("login_password").value;
+
+            if (!aadhaar || !voter_id || !password) {
+                alert("Please enter Aadhaar ID, Voter ID, and Password.");
+                return;
+            }
+
+            fetch("http://127.0.0.1:5000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    aadhaar_id: aadhaar,
+                    voter_id: voter_id,
+                    password: password
+                })
+            }).then(response => response.json())
+              .then(data => {
+                  if (data.token) {
+                      token = data.token;
+                      alert("Login successful!");
+                  } else {
+                      alert("Login failed: " + data.message);
+                  }
+              });
+        }
+
+        function vote() {
+            if (!token) {
+                alert("Please log in first.");
+                return;
+            }
+            fetch("http://127.0.0.1:5000/vote", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-access-token": token
+                },
+                body: JSON.stringify({
+                    candidate: document.getElementById("candidate").value
+                })
+            }).then(response => response.json())
+              .then(data => alert(data.message));
+        }
+    </script>
+</body>
+</html>
+
+
