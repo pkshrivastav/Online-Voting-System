@@ -1,0 +1,158 @@
+{
+    "users": [
+        {
+            "name": "raghav",
+            "aadhaar_id": "378367423133",
+            "voter_id": "GPW08789322",
+            "password": "pbkdf2:sha256:1000000$P5IaKNGt7MNsaltL$082d259c1c96c2616e0c839f0f8df6fc484a40c61e2dfb239798308476b64d9b",
+            "state": "Bihar",
+            "sex": "Male",
+            "age": "22",
+            "candidate": "Congress",
+            "has_voted": true
+        },
+        {
+            "name": "sitaram",
+            "aadhaar_id": "738967787892",
+            "voter_id": "GPW08547",
+            "password": "pbkdf2:sha256:1000000$jbJAru7HiyJxqNDw$c6baa4d82df906c6297c79fdfc233baa7fee6d6b339031363413579f709cc552",
+            "state": "goa",
+            "sex": "Female",
+            "age": "23",
+            "candidate": "BJP",
+            "has_voted": true
+        },
+        {
+            "name": "radharani",
+            "aadhaar_id": "908543454789",
+            "voter_id": "GPW0867234",
+            "password": "pbkdf2:sha256:1000000$WEb2l9lNV90ThpYP$46aa52400d38f94b7465c24f67ec8ede02f19105db755ba1bf79ecca665b9fe7",
+            "state": "Tamil Nadu",
+            "sex": "Female",
+            "age": "23",
+            "candidate": "Another",
+            "has_voted": true
+        },
+        {
+            "name": "ram",
+            "aadhaar_id": "321673423342",
+            "voter_id": "GPW086433",
+            "password": "pbkdf2:sha256:1000000$12r31YB6jHV8ouvi$a3f95d3015b45b07bebea6c47b594921b084304653f6f4805f376741ebd7b0a8",
+            "state": "keral",
+            "sex": "Male",
+            "age": "67",
+            "candidate": null,
+            "has_voted": false
+        },
+        {
+            "name": "krishna",
+            "aadhaar_id": "832898972378",
+            "voter_id": "GPW0889342897",
+            "password": "pbkdf2:sha256:1000000$1CXP9zQBt1hHECk1$89b6a2b1a10b898216de889477870909492f02d7260c9af23228f4e91f757524",
+            "state": "kashmir",
+            "sex": "Female",
+            "age": "22",
+            "candidate": null,
+            "has_voted": false
+        },
+        {
+            "name": "krishn",
+            "aadhaar_id": "GPW0889348967",
+            "voter_id": "GPW0889342678",
+            "password": "pbkdf2:sha256:1000000$ajVzIxUJ8T0ASlRH$c99cbcf117dcd564f066fadd6cf1bd171096c354425665272e06fc31c2a82b2e",
+            "state": "ladak",
+            "sex": "Male",
+            "age": "45",
+            "candidate": "Nota",
+            "has_voted": true
+        },
+        {
+            "name": "bhavani",
+            "aadhaar_id": "8793789342789",
+            "voter_id": "GPW0868790",
+            "password": "pbkdf2:sha256:1000000$FEom4p4v7L9TUSwi$6f15e1b9db949482a1cc4e024348b0a83418b6e200dc1b69b1f13259af019ff3",
+            "state": "Tamil Nadu",
+            "sex": "Female",
+            "age": "34",
+            "candidate": "BJP",
+            "has_voted": true
+        },
+        {
+            "name": "bholenath",
+            "aadhaar_id": "903034443234",
+            "voter_id": "GPW08689732",
+            "password": "pbkdf2:sha256:1000000$jCU7jujpVYxutMhJ$af9d4d216ff788ec1ed532bdecce378a1831130dc3990fa27e1ff4d501176be1",
+            "state": "Bihar",
+            "sex": "Male",
+            "age": "56",
+            "candidate": "Another",
+            "has_voted": true
+        },
+        {
+            "name": "Pyaray Lal",
+            "aadhaar_id": "990998720646",
+            "voter_id": "GPW0868497",
+            "password": "pbkdf2:sha256:1000000$3XkJFeuZP4F2JsfV$362f6f223e8188652d3dd0e3ca78d8a22f900aca4a6dea5c726265840a7a89d0",
+            "state": "Bihar",
+            "sex": "Male",
+            "age": "23",
+            "candidate": "BJP",
+            "has_voted": true
+        },
+        {
+            "name": "ramsiya",
+            "aadhaar_id": "990998722345",
+            "voter_id": "GPW08684567",
+            "password": "pbkdf2:sha256:1000000$ZLHgMHicmOk5dGGj$baf17f469d7e6c98553962c105d6fda74811aace8927690d8cb3f09e6274071a",
+            "state": "Bihar",
+            "sex": "Male",
+            "age": "23",
+            "candidate": null,
+            "has_voted": false
+        },
+        {
+            "name": "tivari",
+            "aadhaar_id": "432567238787",
+            "voter_id": "GPW08682345",
+            "password": "pbkdf2:sha256:1000000$vglHVpoSTcNuQfN9$30ebf0c8d41ef2cad429a84738eb93758a77b5e3205fa0e29def6c50ce59681f",
+            "state": "Bihar",
+            "sex": "Male",
+            "age": "45",
+            "candidate": "Another",
+            "has_voted": true
+        },
+        {
+            "name": "radharani ",
+            "aadhaar_id": "897327547571",
+            "voter_id": "GPW086847834",
+            "password": "pbkdf2:sha256:1000000$FDbj9jyMNlDYtwJ8$2e12dd838703b5986b224cbc1301b32ec75f81cba617b9f1c5f23ce6370a1a28",
+            "state": "Bihar",
+            "sex": "Female",
+            "age": "23",
+            "candidate": "Nota",
+            "has_voted": true
+        },
+        {
+            "name": "radhekrishna",
+            "aadhaar_id": "223645878794",
+            "voter_id": "GPW0868787",
+            "password": "pbkdf2:sha256:1000000$ZVg7F4BA1fngxzZ0$8daf276c240eedbe9c30a080f7a3054185336f526ede44aa39743919160e5407",
+            "state": "Tamil Nadu",
+            "sex": "Male",
+            "age": "80",
+            "candidate": null,
+            "has_voted": false
+        },
+        {
+            "name": "janaki",
+            "aadhaar_id": "223645878234",
+            "voter_id": "GPW0868745",
+            "password": "pbkdf2:sha256:1000000$QOkGuwaOyb85mIOj$64e0910f846147275da80767275fc964bc8c9b8b2f1af72d31780f2d1f02969a",
+            "state": "aasam",
+            "sex": "Female",
+            "age": "25",
+            "candidate": "Nota",
+            "has_voted": true
+        }
+    ]
+}
